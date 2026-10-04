@@ -1064,9 +1064,11 @@ function HeroPool:BuildFromHeroList()
 	local attributeIndexByName = best.attributeIndexByName or {}
 
 	for _, name in ipairs( best.names ) do
+		-- attribute = nil: по рантайм-логу движок не отдаёт атрибуты героев,
+		-- заполнятся ниже из проектного HeroAttributes.MAP (см. Build()).
 		list[ #list + 1 ] = {
 			name = name,
-			attribute = self:GetAttributeNameByIndex( attributeIndexByName[ name ] ),
+			attribute = nil,
 			primaryAttribute = attributeIndexByName[ name ],
 		}
 	end
@@ -1718,6 +1720,18 @@ function HeroPool:Build()
 
 	-- Стабильный порядок, чтобы логи и дебаг были предсказуемыми
 	table.sort( list, function( a, b ) return a.name < b.name end )
+
+	-- Проектовый статический mapping атрибутов (draft/hero_attributes.lua).
+	-- По рантайм-логу: HeroList отдаёт имена героев, но attribute у них nil.
+	-- Маппинг применяется как ДОПОЛНЕНИЕ к любому источнику:
+	-- заполняем только пустые attribute, подтверждённые движком не перезаписываем.
+	if type( HeroAttributes ) == "table" and type( HeroAttributes.MAP ) == "table" then
+		for _, hero in ipairs( list ) do
+			if hero.attribute == nil then
+				hero.attribute = HeroAttributes.MAP[ hero.name ]
+			end
+		end
+	end
 
 	self.cache = list
 
