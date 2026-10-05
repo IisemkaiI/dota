@@ -1,20 +1,21 @@
 ] developer 1
+Send msg 7197 (k_EMsgGCMatchmakingStatsRequest), 8 bytes
 ] dota_launch_custom_game hero_clash_turbo dota
 Loading custom game "hero_clash_turbo" with map "dota"
 CHostStateMgr::QueueNewRequest( Loading (dota), 2 )
 HostStateRequest::Start(HSR_GAME):  loop(levelload) id(2) addons(hero_clash_turbo) desc(Loading (dota))
 SwitchToLoop levelload requested:  id [2] addons [hero_clash_turbo]
 CL:  IGameSystem::LoopDeactivateAllSystems {
-WriteSteamRemoteStorageFileAsync( "scripts/control_groups.txt" ) -> at 380.044
-WriteSteamRemoteStorageFileAsync( "scripts/item_suggest_preference.txt" ) -> at 380.045
+WriteSteamRemoteStorageFileAsync( "scripts/control_groups.txt" ) -> at 124.419
+WriteSteamRemoteStorageFileAsync( "scripts/item_suggest_preference.txt" ) -> at 124.419
 CL:  } IGameSystem::LoopDeactivateAllSystems done
 Disconnecting from server: NETWORK_DISCONNECT_LOOPDEACTIVATE
-Closing Steam Net Connection on socket 'client' to loopback:1, handle #4052095953 (2055 NETWORK_DISCONNECT_LOOPDEACTIVATE)
-CloseSteamNetConnection handle #4052095953 (userdata 1)
-Disassociating NetChan server @  (unknown) from Steam Net Connection handle #4052095953 (userdata 1)
-[#4052095953 pipe 'server'] closed by app, linger requested but not needed (2055) NETWORK_DISCONNECT_LOOPDEACTIVATE
-[#2258340778 pipe 'KillStealer'] closed by peer (2055): NETWORK_DISCONNECT_LOOPDEACTIVATE
-Removing Steam Net Connection for loopback:1, handle #4052095953
+Closing Steam Net Connection on socket 'client' to loopback:1, handle #3491238124 (2055 NETWORK_DISCONNECT_LOOPDEACTIVATE)
+CloseSteamNetConnection handle #3491238124 (userdata 1)
+Disassociating NetChan server @  (unknown) from Steam Net Connection handle #3491238124 (userdata 1)
+[#3491238124 pipe 'server'] closed by app, linger requested but not needed (2055) NETWORK_DISCONNECT_LOOPDEACTIVATE
+[#790198733 pipe 'KillStealer'] closed by peer (2055): NETWORK_DISCONNECT_LOOPDEACTIVATE
+Removing Steam Net Connection for loopback:1, handle #3491238124
 Closing 'client' poll group
 SV:  IGameSystem::LoopDeactivateAllSystems {
 HO:  IGameSystem::LoopDeactivateAllSystems {
@@ -24,17 +25,17 @@ SV:  Server shutting down: NETWORK_DISCONNECT_LOOPDEACTIVATE (55)
 CNetworkGameServerBase::SetServerState (ss_active -> ss_dead)
 Disconnect client 'KillStealer' from server: NETWORK_DISCONNECT_SHUTDOWN (Server shutdown)
 Client 0 'KillStealer' signon state SIGNONSTATE_FULL -> SIGNONSTATE_NONE
-Closing Steam Net Connection on socket 'server' to loopback:0, handle #2258340778 (1001 NETWORK_DISCONNECT_SHUTDOWN)
-CloseSteamNetConnection handle #2258340778 (userdata 0)
-Disassociating NetChan KillStealer @  (unknown) from Steam Net Connection handle #2258340778 (userdata 0)
-Removing Steam Net Connection for loopback:0, handle #2258340778
+Closing Steam Net Connection on socket 'server' to loopback:0, handle #790198733 (1001 NETWORK_DISCONNECT_SHUTDOWN)
+CloseSteamNetConnection handle #790198733 (userdata 0)
+Disassociating NetChan KillStealer @  (unknown) from Steam Net Connection handle #790198733 (userdata 0)
+Removing Steam Net Connection for loopback:0, handle #790198733
 CPlayerVoiceListener::PostSpawnGroupUnload()
 CPlayerVoiceListener::PostSpawnGroupUnload()
 Closing 'server' poll group
 SV: CNetworkStringTableContainer::RemoveAllTables:  removing 19 tables
 CL: CNetworkStringTableContainer::RemoveAllTables:  removing 19 tables
 [Client]Skipping setup of already loaded game keyvalues. (base game)
-WriteSteamRemoteStorageFileAsync( "voice_ban.dt" ) -> at 380.089
+WriteSteamRemoteStorageFileAsync( "voice_ban.dt" ) -> at 124.464
 CPlayerVoiceListener::GameShutdown()
 [Server]Skipping setup of already loaded game keyvalues. (base game)
 ResetBreakpadAppId: Universe is 1 (k_EUniversePublic)
@@ -47,11 +48,11 @@ ILocalize::AddFile() failed to load file "panorama/localization/addon_russian.tx
 CLocalize::CompileString failed to localize: '#addon_game_name'
 ChangeGameUIState: DOTA_GAME_UI_STATE_DASHBOARD -> DOTA_GAME_UI_STATE_LOADING_SCREEN
 LoadingDisplay changed from NONE to LOADING (map="")
-CAsyncWriteInProgress::OnComplete( "scripts/control_groups.txt" ) -> Success at 380.184
-CAsyncWriteInProgress::OnComplete( "scripts/item_suggest_preference.txt" ) -> Success at 380.184
-CAsyncWriteInProgress::OnComplete( "voice_ban.dt" ) -> Success at 380.184
-Steam Net connection #2258340778 pipe 'KillStealer' closed by peer, reason 2055: NETWORK_DISCONNECT_LOOPDEACTIVATE
-CloseSteamNetConnection handle #2258340778 (userdata -1)
+CAsyncWriteInProgress::OnComplete( "scripts/control_groups.txt" ) -> Success at 124.543
+CAsyncWriteInProgress::OnComplete( "scripts/item_suggest_preference.txt" ) -> Success at 124.543
+CAsyncWriteInProgress::OnComplete( "voice_ban.dt" ) -> Success at 124.543
+Steam Net connection #790198733 pipe 'KillStealer' closed by peer, reason 2055: NETWORK_DISCONNECT_LOOPDEACTIVATE
+CloseSteamNetConnection handle #790198733 (userdata -1)
 CL:  CLoopModeLevelLoad::MaybeSwitchToGameLoop switching to "game" loopmode with addons (hero_clash_turbo)
 SwitchToLoop game requested:  id [2] addons [hero_clash_turbo]
 CLocalize::CompileString failed to localize: '#addon_game_name'
@@ -82,17 +83,19 @@ Found
 S:Gamerules: entering state 'DOTA_GAMERULES_STATE_INIT'
 SV:  CGameRulesGameSystem::GameInit installed game rules
 CPlayerVoiceListener::GameInit()
+Recv msg 7198 (k_EMsgGCMatchmakingStatsResponse), 309 bytes
+Failed loading resource "particles/neutral_fx/miniboss_damage_reflect_explosion.vpcf_c" (ERROR_FILEOPEN: File not found)
 SV:  Connection to Steam servers successful.
-SV:  ServerSteamID=[A:1:2641622043:51713] (90294100832810011).
-[STARTUP] {383.087} logged on to Steam
+SV:  ServerSteamID=[A:1:1092419611:51726] (90294155118182427).
+[STARTUP] {128.264} logged on to Steam
 Logged on to Steam, set GC connection state to NO_SESSION
 Send msg 4007 (k_EMsgGCServerHello), 22 bytes
-Gameserver logged on to Steam, assigned identity steamid:90294100832810011
-AuthStatus (steamid:90294100832810011):  Attempting  (Requesting cert)
+Gameserver logged on to Steam, assigned identity steamid:90294155118182427
+AuthStatus (steamid:90294155118182427):  Attempting  (Requesting cert)
 OnSteamServersConnected()
 SV:  VAC secure mode disabled.
-AuthStatus (steamid:90294100832810011):  OK  (OK)
-Certificate expires in 48h00m at 1791331528 (current time 1791158728), will renew in 46h00m
+AuthStatus (steamid:90294155118182427):  OK  (OK)
+Certificate expires in 48h00m at 1791394884 (current time 1791222083), will renew in 46h00m
 Recv msg 4005 (k_EMsgGCServerWelcome), 26 bytes
 Received server welcome from GC.
 CMsgClientWelcome subscribed: 0 up-to-date, 0 out-of-date
@@ -104,7 +107,7 @@ Client:  Disconnected
 @ Current  :  levelload
 CL:  CGameClientConnectPrerequisite status
 CL:  sequential     :  'CGameClientConnectPrerequisite'
-CL:  pending        :  1/7 [2249.049 msec]
+CL:  pending        :  1/7 [2350.334 msec]
 CL:  prerequisite   :  .'CWaitForGameServerStartupPrerequisite'
 CL:  waiting        :  ..waiting for IsServerRunning()
 CL:  pending        :  2/7 [not started]
@@ -122,9 +125,8 @@ CL:  prerequisite   :  .'CAsyncShaderCompilePrerequisite'
 CL:  pending        :  7/7 [not started]
 CL:  prerequisite   :  .'CFinalizeConnectionPrerequisite'
 ---
-Unable to load grid nav for world "prefabs/promotional_dire_fountain"
 Unable to load grid nav for world "prefabs/promotional_radiant_fountain"
-Failed loading resource "particles/neutral_fx/miniboss_damage_reflect_explosion.vpcf_c" (ERROR_FILEOPEN: File not found)
+Unable to load grid nav for world "prefabs/promotional_dire_fountain"
 Failed loading resource "materials/particle/particle_ring_blurry_generic_projected.vmat_c" (ERROR_FILEOPEN: File not found)
 Failed loading resource "materials/sprites/blueglow1.vmat_c" (ERROR_FILEOPEN: File not found)
 Failed loading resource "panorama/images/players/0_png.vtex_c" (ERROR_FILEOPEN: File not found)
@@ -135,13 +137,13 @@ CNetworkGameServerBase::SetServerState (ss_waitingforgamesessionmanifest -> ss_l
 CNetworkGameServerBase::SetServerState (ss_loading -> ss_active)
 CL:  CWaitForGameServerStartupPrerequisite done waiting for server
 CL:  CCreateGameClientJob creating client connection to 'loopback'
-[#380780533 pipe] connected
-[#2251945183 pipe] connected
+[#1564086142 pipe] connected
+[#386062704 pipe] connected
 Created poll group for socket 'client'
-Connected loopback client=16b23ff5@loopback:1 <-> server=8639f4df@loopback:0
+Connected loopback client=5d3a0f7e@loopback:1 <-> server=1702d970@loopback:0
 Tick packet desired receive margin now 35.0ms.  cl_tickpacket_recvmargin_desired=5  cl_tickpacket_desired_queuelength=0.  engine_frametime_warnings_enable=0, cl_async_usercmd_send=1
-Associating NetChan KillStealer @ loopback:0 (loopback:0) with Steam Net Connection handle #2251945183 (userdata 0)
-Associating NetChan server @ loopback:1 (loopback:1) with Steam Net Connection handle #380780533 (userdata 1)
+Associating NetChan KillStealer @ loopback:0 (loopback:0) with Steam Net Connection handle #386062704 (userdata 0)
+Associating NetChan server @ loopback:1 (loopback:1) with Steam Net Connection handle #1564086142 (userdata 1)
 CL:  Connected to 'loopback:1'
 ClientPutInServer create new player controller [KillStealer]
 Client 0 'KillStealer' setting rate to 80000
@@ -167,18 +169,18 @@ C:Gamerules: entering state 'DOTA_GAMERULES_STATE_INIT'
 CDOTA_Hud_Main::EventGameRulesStateChanged DOTA_GAMERULES_STATE_INIT
 CDOTA_Hud_Main::DeleteGameEndScreen deleted GameEndContainer
 CL:  CGameRulesGameSystem::GameInit installed game rules
-ReadSteamRemoteStorageFile( bufOut, "voice_ban.dt" ) -> 0.000878 seconds
+ReadSteamRemoteStorageFile( bufOut, "voice_ban.dt" ) -> 0.000583 seconds
 Tick packet desired receive margin now 71.7ms.  cl_tickpacket_recvmargin_desired=5  cl_tickpacket_desired_queuelength=0.  engine_frametime_warnings_enable=0, cl_async_usercmd_send=1
 SV:  "KillStealer<0><[U:1:1253347831]><>" STEAM USERID validated
-Recv msg 24 (k_ESOMsg_CacheSubscribed), 36027 bytes
-Recv msg 24 (k_ESOMsg_CacheSubscribed), 42 bytes
 CNetworkGameClient::ProcessClassInfo: create on client true
 CNetworkGameClient::ProcessClassInfo: creating client serializers from local server serializers (crc 0, server api exists)
 Client missing networkable entity class CPhysMagnet
 Client missing networkable entity class CSpotlightEnd
-CNetworkGameClientBase::LinkClasses took 167.399 msec
+CNetworkGameClientBase::LinkClasses took 141.453 msec
 C_DOTAGamerules::PrecacheMinimapResources: couldn't load file resource/overviews/prefabs/promotional_radiant_fountain.txt.
 C_DOTAGamerules::PrecacheMinimapResources: couldn't load file resource/overviews/prefabs/promotional_dire_fountain.txt.
+Recv msg 24 (k_ESOMsg_CacheSubscribed), 42 bytes
+Recv msg 24 (k_ESOMsg_CacheSubscribed), 36027 bytes
 Unable to load grid nav for world "prefabs/promotional_radiant_fountain" (ERROR_FILEOPEN: File not found)
 Unable to load grid nav for world "prefabs/promotional_dire_fountain" (ERROR_FILEOPEN: File not found)
 Failed loading resource "panorama/images/heroes/icons/npc_dota_hero_announcer_killing_spree_png.vtex_c" (ERROR_FILEOPEN: File not found)
@@ -224,13 +226,13 @@ server_key: ""
 server_hibernation: false
 server_type: GAME
 server_region: 0
-server_loadavg: 0.143536016
+server_loadavg: 0.113411993
 server_tv_broadcast_time: -120
 server_game_time: 0
 relay_slots_max: 0
 relays_connected: 0
 relay_clients_connected: 0
-tv_secret_code: 4375509239146154513
+tv_secret_code: 7103594402326579544
 server_version: 6943
 server_cluster: 0
 assigned_server_tv_port: 27020
@@ -239,28 +241,28 @@ build_version: 6943
 
 ---
 CL:  IGameSystem::LoopActivateAllSystems {
-ReadSteamRemoteStorageFile( bufOut, "scripts/control_groups.txt" ) -> 0.000723 seconds
-ReadSteamRemoteStorageFile( bufOut, "scripts/item_suggest_preference.txt" ) -> 0.000447 seconds
+ReadSteamRemoteStorageFile( bufOut, "scripts/control_groups.txt" ) -> 0.000625 seconds
+ReadSteamRemoteStorageFile( bufOut, "scripts/item_suggest_preference.txt" ) -> 0.000397 seconds
 CL:  } IGameSystem::LoopActivateAllSystems done
 Host activate: Loading (dota)
 CL:  CNetworkGameClient::OnSwitchLoopModeFinished( game : success )
 Send msg 4508 (k_EMsgGCGameServerInfo), 82 bytes
 SV:  Sending full update to client KillStealer (reason:  initial update)
-55. Msg_HltvReplay real-time->real-time
-1.80 OnHltvReplay END
+54. Msg_HltvReplay real-time->real-time
+1.73 OnHltvReplay END
 CNetworkGameClientBase::OnReceivedUncompressedPacket(), received full update
 VConsole Rejecting Message: 'EFUL'
 Resetting prediction state because we received a full update
-Receiving 16.5K non-incremental update from server
+Receiving 16.4K non-incremental update from server
 Created physics for dota
 DOTABaseGameMode::Spawn()
 Failed to load. pName='DOTANeutralItems', bIncrementVersion=true, list: 
 scripts/npc/npc_neutral_items_custom.txt
 [Ability Schema]: Next 10 available ids are: 264,276,314,315,341,342,345,373,410,415,
 Found
-   93: 740.881400 msec change 'OnGameModeEntityChanged()' on field m_hGameModeEntity(path=0/28) for ent dota_gamerules(C_DOTAGamerulesProxy) name=''
+   93: 728.725100 msec change 'OnGameModeEntityChanged()' on field m_hGameModeEntity(path=0/28) for ent dota_gamerules(C_DOTAGamerulesProxy) name=''
 server @ loopback:1:  NetChan Setting Timeout to 30.00 seconds
-CL:  Signon traffic "server":  incoming 137.560 KB [21 netframes], outgoing 1.363 KB [20 netframes]
+CL:  Signon traffic "server":  incoming 136.685 KB [19 netframes], outgoing 1.354 KB [19 netframes]
 Added prediction for player slot 0 ()
 KillStealer @ loopback:0:  NetChan Setting Timeout to 20.00 seconds
 CDOTA_PlayerResource: Adding player SteamID 76561199213613559 to PlayerID 0 FakeClient=0, preferred PlayerID = -1
@@ -278,13 +280,13 @@ server_key: ""
 server_hibernation: false
 server_type: GAME
 server_region: 0
-server_loadavg: 0.0865940154
+server_loadavg: 0.0918482393
 server_tv_broadcast_time: -120
-server_game_time: 2.86666679
+server_game_time: 2.83333349
 relay_slots_max: 0
 relays_connected: 0
 relay_clients_connected: 0
-tv_secret_code: 4375509239146154513
+tv_secret_code: 7103594402326579544
 server_version: 6943
 server_cluster: 0
 assigned_server_tv_port: 27020
@@ -303,13 +305,16 @@ CDOTA_Hud_Main::EventGameRulesStateChanged DOTA_GAMERULES_STATE_CUSTOM_GAME_SETU
 CLocalize::CompileString failed to localize: '#addon_game_name'
 Too many non-culled draws (alloc 128, need 418), resizing!
 Send msg 4508 (k_EMsgGCGameServerInfo), 82 bytes
-   80: 1.048300 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/0/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.299700 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/0/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.724000 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/0/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.315500 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/0/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.688400 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/0/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.653200 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/0/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.730100 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/0/2) for ent (C_DOTA_PlayerResource) name=''
 
 [HCT] === PHASE 1 SELF-TEST ===
 [HCT][HeroListTiming] === старт lifecycle-пробы (reason=Build) ===
 [HCT][HeroListTiming] подписка game_rules_state_change установлена (context = HeroPool)
-[HCT][HeroListTiming] t=6.8000001907349 | reason=Build | delay=0
+[HCT][HeroListTiming] t=6.7333335876465 | reason=Build | delay=0
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
@@ -339,7 +344,12 @@ Send msg 4508 (k_EMsgGCGameServerInfo), 82 bytes
 [HCT] Dire | players = 0 | ready = false | captain = nil
 [HCT] SELF-TEST DONE | state = MENU | mode = NONE
 [HCT] Чтобы отключить самопроверку, поставь HCT_DEBUG_SELF_TEST = false в core/game_mode.lua
-[HCT][HeroListTiming] t=7.8000001907349 | reason=Build | delay=1
+[HCT][HeroListTiming] t=7.7333335876465 | reason=Build | delay=1
+[HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
+[HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
+[HCT][HeroListTiming]   элементов в таблице нет
+[HCT][HeroListTiming] VERDICT: EMPTY_TOO_EARLY (объект есть, count = 0)
+[HCT][HeroListTiming] t=9.7333335876465 | reason=Build | delay=3
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
@@ -354,7 +364,7 @@ Send msg 8870 (k_EMsgServerToGCLobbyInitialized), 8 bytes
 [HCT]     player 0 (captain)
 [HCT] Dire | players = 0 | ready = false | captain = nil
 [HCT][HeroListTiming] EVENT HERO_SELECTION -> probe
-[HCT][HeroListTiming] t=9.6333341598511 | reason=state:HERO_SELECTION | delay=0
+[HCT][HeroListTiming] t=9.8666667938232 | reason=state:HERO_SELECTION | delay=0
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
@@ -368,13 +378,13 @@ server_key: ""
 server_hibernation: false
 server_type: GAME
 server_region: 0
-server_loadavg: 0.207843557
+server_loadavg: 0.0890323743
 server_tv_broadcast_time: -120
-server_game_time: -59.9999962
+server_game_time: -60
 relay_slots_max: 0
 relays_connected: 0
 relay_clients_connected: 0
-tv_secret_code: 4375509239146154513
+tv_secret_code: 7103594402326579544
 server_version: 6943
 server_cluster: 0
 assigned_server_tv_port: 27020
@@ -388,78 +398,75 @@ CDOTA_Hud_Main::EventGameRulesStateChanged DOTA_GAMERULES_STATE_HERO_SELECTION
 PregameHud - eGameState is now DOTA_GAMERULES_STATE_HERO_SELECTION
 PregameHud - SetPreGameVisible 1
 Send msg 4508 (k_EMsgGCGameServerInfo), 82 bytes
-Job EconItemSearch has spent >3.000ms without yielding: 92.005ms
-Job EconItemSearch has spent >3.000ms without yielding: 10.027ms
-[HCT][HeroListTiming] t=9.8000001907349 | reason=Build | delay=3
-[HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
-[HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
-[HCT][HeroListTiming]   элементов в таблице нет
-[HCT][HeroListTiming] VERDICT: EMPTY_TOO_EARLY (объект есть, count = 0)
-Job EconItemSearch has spent >3.000ms without yielding: 10.024ms
-Job EconItemSearch has spent >3.000ms without yielding: 10.046ms
-Job EconItemSearch has spent >3.000ms without yielding: 10.100ms
-Job EconItemSearch has spent >3.000ms without yielding: 10.042ms
-Job EconItemSearch has spent >3.000ms without yielding: 10.064ms
+Job EconItemSearch has spent >3.000ms without yielding: 70.305ms
 Job EconItemSearch has spent >3.000ms without yielding: 10.004ms
-[HCT][HeroListTiming] t=11.633334159851 | reason=state:HERO_SELECTION+2s | delay=2
+Job EconItemSearch has spent >3.000ms without yielding: 10.081ms
+Job EconItemSearch has spent >3.000ms without yielding: 10.049ms
+Job EconItemSearch has spent >3.000ms without yielding: 10.056ms
+Job EconItemSearch has spent >3.000ms without yielding: 10.083ms
+[HCT][HeroListTiming] t=11.733333587646 | reason=Build | delay=5
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
 [HCT][HeroListTiming] VERDICT: EMPTY_TOO_EARLY (объект есть, count = 0)
-[HCT][HeroListTiming] t=11.800000190735 | reason=Build | delay=5
+[HCT][HeroListTiming] t=11.866667747498 | reason=state:HERO_SELECTION+2s | delay=2
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
 [HCT][HeroListTiming] VERDICT: EMPTY_TOO_EARLY (объект есть, count = 0)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_muerta_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_muerta(138)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_lina_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_lina(25)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_lich_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_lich(31)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_lina_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_lina(25)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_grimstroke_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_grimstroke(121)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_invoker_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_invoker(74)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_grimstroke_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_grimstroke(121)
-CLocalize::FindSafe failed to localize: '#npc_dota_hero_invoker_npedesc2'
-PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_invoker(74)
-PR:SetSelectedHero 0:[U:1:1253347831] npc_dota_hero_invoker(74)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_sniper_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_sniper(35)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_templar_assassin_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_templar_assassin(46)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_silencer_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_silencer(75)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_phantom_lancer_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_phantom_lancer(12)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_riki_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_riki(32)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_pudge_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_pudge(14)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_void_spirit_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_void_spirit(126)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_shadow_shaman_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_shadow_shaman(27)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_pugna_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_pugna(45)
+CLocalize::FindSafe failed to localize: '#npc_dota_hero_furion_npedesc2'
+PR:SetPossibleHeroSelection 0:[U:1:1253347831] npc_dota_hero_furion(53)
+PR:SetSelectedHero 0:[U:1:1253347831] npc_dota_hero_furion(53)
 S:Gamerules: entering state 'DOTA_GAMERULES_STATE_STRATEGY_TIME'
 [HCT] game_rules_state_change -> STRATEGY_TIME
 
 [HCT] === BOT POPULATE ===
 [HCT] до BotPopulate подключено: 1
-ClientPutInServer create new player controller [Juan]
+ClientPutInServer create new player controller [Εύη]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 1 FakeClient=1, preferred PlayerID = -1
 PR:SetSelectedHero 1:[I:0:0] npc_dota_hero_lich(31)
-ClientPutInServer create new player controller [Saulo]
+ClientPutInServer create new player controller [嘉梅]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 2 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 2:[I:0:0] npc_dota_hero_chaos_knight(81)
-ClientPutInServer create new player controller [กฤษดา]
+PR:SetSelectedHero 2:[I:0:0] npc_dota_hero_tiny(19)
+ClientPutInServer create new player controller [阮娟]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 3 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 3:[I:0:0] npc_dota_hero_skywrath_mage(101)
-ClientPutInServer create new player controller [Aline]
+PR:SetSelectedHero 3:[I:0:0] npc_dota_hero_zuus(22)
+ClientPutInServer create new player controller [Jia]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 4 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 4:[I:0:0] npc_dota_hero_luna(48)
-ClientPutInServer create new player controller [Jakub]
+PR:SetSelectedHero 4:[I:0:0] npc_dota_hero_drow_ranger(6)
+ClientPutInServer create new player controller [Валерія]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 5 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 5:[I:0:0] npc_dota_hero_kunkka(23)
-ClientPutInServer create new player controller [Ester]
+PR:SetSelectedHero 5:[I:0:0] npc_dota_hero_skywrath_mage(101)
+ClientPutInServer create new player controller [Назар]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 6 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 6:[I:0:0] npc_dota_hero_razor(15)
-ClientPutInServer create new player controller [Остап]
+PR:SetSelectedHero 6:[I:0:0] npc_dota_hero_zuus(22)
+ClientPutInServer create new player controller [Christian]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 7 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 7:[I:0:0] npc_dota_hero_bane(3)
-ClientPutInServer create new player controller [Agnieszka]
+PR:SetSelectedHero 7:[I:0:0] npc_dota_hero_axe(2)
+ClientPutInServer create new player controller [Ester]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 8 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 8:[I:0:0] npc_dota_hero_vengefulspirit(20)
-ClientPutInServer create new player controller [Νικόλας]
+PR:SetSelectedHero 8:[I:0:0] npc_dota_hero_bloodseeker(4)
+ClientPutInServer create new player controller [Adriana]
 CDOTA_PlayerResource: Adding player SteamID 0 to PlayerID 9 FakeClient=1, preferred PlayerID = -1
-PR:SetSelectedHero 9:[I:0:0] npc_dota_hero_bloodseeker(4)
+PR:SetSelectedHero 9:[I:0:0] npc_dota_hero_oracle(111)
 [HCT] после BotPopulate подключено: 10
 [HCT] добавлено контроллеров: 9
 
@@ -537,84 +544,87 @@ PR:SetSelectedHero 9:[I:0:0] npc_dota_hero_bloodseeker(4)
 [HCT]   Radiant = npc_dota_hero_sven
 [HCT]   mirror = false
 [HCT][HeroListTiming] событие game_rules_state_change -> state=5 -- немедленная проба
-[HCT][HeroListTiming] t=20.933334350586 | reason=state_change | delay=0
+[HCT][HeroListTiming] t=24.066667556763 | reason=state_change | delay=0
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
 [HCT][HeroListTiming] VERDICT: EMPTY_TOO_EARLY (объект есть, count = 0)
-    4: 15.927700 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    6: 1.693100 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    5: 1.715400 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-   10: 1.680400 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    7: 1.689300 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    2: 1.641200 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    8: 1.620600 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    3: 1.752500 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-    9: 1.717000 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
-   80: 0.558700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/1/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.379900 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/2/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.315700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/3/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.322800 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/4/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.309100 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/5/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.313200 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/6/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.341700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/7/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.323100 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/8/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.318100 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/9/27) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.396600 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/1/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.272800 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/1/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.337200 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/2/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.282000 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/2/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.381000 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/3/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.275600 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/3/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.360000 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/4/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.265100 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/4/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.380300 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/5/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.277600 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/5/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.322800 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/6/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.303500 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/6/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.403900 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/7/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.268700 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/7/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.337200 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/8/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.244800 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/8/4) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.313300 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/9/2) for ent (C_DOTA_PlayerResource) name=''
-   80: 0.310100 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/9/4) for ent (C_DOTA_PlayerResource) name=''
+    6: 16.014400 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    7: 1.613900 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    4: 1.620600 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    5: 1.641400 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    8: 1.638500 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    3: 1.602700 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    2: 1.638400 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+   80: 0.555600 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/1/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.375700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/2/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.313400 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/3/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.310700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/4/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.308700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/5/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.304800 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/6/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.320800 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/7/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.332700 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/8/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.321900 msec change 'OnPlayerTeamDataTeamChanged()' on field m_iTeamSlot(path=0/9/27) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.326000 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/1/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.242500 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/1/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.315900 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/2/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.236500 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/2/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.382800 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/3/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.238400 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/3/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.303700 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/4/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.228400 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/4/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.294300 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/5/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.278700 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/5/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.341200 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/6/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.242400 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/6/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.299300 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/7/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.226400 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/7/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.298200 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/8/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.226100 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/8/4) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.302100 msec change 'OnPlayerDataTeamChanged()' on field m_iPlayerTeam(path=1/9/2) for ent (C_DOTA_PlayerResource) name=''
+   80: 0.227300 msec change 'OnPlayerDataFakeClientChanged()' on field m_bFakeClient(path=1/9/4) for ent (C_DOTA_PlayerResource) name=''
+   10: 1.683800 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
+    9: 1.727500 msec change 'OnPlayerIDChanged()' on field m_nPlayerID(path=20) for ent dota_player_controller(C_DOTAPlayerController) name=''
 C:Gamerules: entering state 'DOTA_GAMERULES_STATE_STRATEGY_TIME'
 CDOTA_Hud_Main::EventGameRulesStateChanged DOTA_GAMERULES_STATE_STRATEGY_TIME
 PregameHud - eGameState is now DOTA_GAMERULES_STATE_STRATEGY_TIME
 Send msg 8330 (k_EMsgServerToGCRequestPlayerRecentAccomplishments), 25 bytes
-Job CDOTAGuideController::FindOrLoadGuide has spent >3.000ms without yielding: 9.996ms
-   82: 0.491200 msec change 'OnDataTeamPlayerPlayerSteamIDsChanged()' on field m_iPlayerSteamID(path=1/0/87) for ent dota_data_radiant(C_DOTA_DataRadiant) name=''
+   82: 0.419500 msec change 'OnDataTeamPlayerPlayerSteamIDsChanged()' on field m_iPlayerSteamID(path=1/0/87) for ent dota_data_radiant(C_DOTA_DataRadiant) name=''
 Recv msg 8331 (k_EMsgServerToGCRequestPlayerRecentAccomplishmentsResponse), 19 bytes
-Send msg 8729 (k_EMsgClientToGCRequestAccountGuildPersonaInfoBatch), 236 bytes
-Send msg 8673 (k_EMsgClientToGCRequestGuildData), 19 bytes
-Recv msg 8730 (k_EMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse), 543 bytes
+Send msg 8729 (k_EMsgClientToGCRequestAccountGuildPersonaInfoBatch), 222 bytes
+CLocalize::CompileString failed to localize: '#DOTA_Tooltip_CurrentStats_Header'
+Recv msg 8730 (k_EMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse), 482 bytes
 Entity hero_camera [point_camera]: unrecognized parent "loadout_camera_model"
-Recv msg 8674 (k_EMsgClientToGCRequestGuildDataResponse), 19 bytes
+Send msg 8673 (k_EMsgClientToGCRequestGuildData), 19 bytes
 [HCT] через 1с подключено: 10 | прирост к моменту вызова: 9
-PR:SetSelectedHeroFacet 0:[U:1:1253347831] (npc_dota_hero_invoker:(null))
+Recv msg 8674 (k_EMsgClientToGCRequestGuildDataResponse), 19 bytes
+Job CDOTAGuideController::FindOrLoadGuide has spent >3.000ms without yielding: 3.394ms
+can't solve quadratic for light 0.000000 0.000000
+can't solve quadratic for light 0.000000 0.000000
+PR:SetSelectedHeroFacet 0:[U:1:1253347831] (npc_dota_hero_furion:(null))
 PR:SetSelectedHeroFacet 1:[I:0:0] (npc_dota_hero_lich:(null))
-PR:SetSelectedHeroFacet 2:[I:0:0] (npc_dota_hero_chaos_knight:(null))
-PR:SetSelectedHeroFacet 3:[I:0:0] (npc_dota_hero_skywrath_mage:(null))
-PR:SetSelectedHeroFacet 4:[I:0:0] (npc_dota_hero_luna:(null))
-PR:SetSelectedHeroFacet 5:[I:0:0] (npc_dota_hero_kunkka:(null))
-PR:SetSelectedHeroFacet 6:[I:0:0] (npc_dota_hero_razor:(null))
-PR:SetSelectedHeroFacet 7:[I:0:0] (npc_dota_hero_bane:(null))
-PR:SetSelectedHeroFacet 8:[I:0:0] (npc_dota_hero_vengefulspirit:(null))
-PR:SetSelectedHeroFacet 9:[I:0:0] (npc_dota_hero_bloodseeker:(null))
+PR:SetSelectedHeroFacet 2:[I:0:0] (npc_dota_hero_tiny:(null))
+PR:SetSelectedHeroFacet 3:[I:0:0] (npc_dota_hero_zuus:(null))
+PR:SetSelectedHeroFacet 4:[I:0:0] (npc_dota_hero_drow_ranger:(null))
+PR:SetSelectedHeroFacet 5:[I:0:0] (npc_dota_hero_skywrath_mage:(null))
+PR:SetSelectedHeroFacet 6:[I:0:0] (npc_dota_hero_zuus:(null))
+PR:SetSelectedHeroFacet 7:[I:0:0] (npc_dota_hero_axe:(null))
+PR:SetSelectedHeroFacet 8:[I:0:0] (npc_dota_hero_bloodseeker:(null))
+PR:SetSelectedHeroFacet 9:[I:0:0] (npc_dota_hero_oracle:(null))
 S:Gamerules: entering state 'DOTA_GAMERULES_STATE_WAIT_FOR_MAP_TO_LOAD'
 [HCT] game_rules_state_change -> UNKNOWN
 [HCT][HeroListTiming] событие game_rules_state_change -> state=7 -- немедленная проба
-[HCT][HeroListTiming] t=22.900001525879 | reason=state_change | delay=0
+[HCT][HeroListTiming] t=26.333333969116 | reason=state_change | delay=0
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
 [HCT][HeroListTiming] VERDICT: EMPTY_TOO_EARLY (объект есть, count = 0)
 S:Gamerules: entering state 'DOTA_GAMERULES_STATE_PRE_GAME'
-m_flPreGameStartTime set to 22.90
-m_flStateTransitionTime set to 112.90
+m_flPreGameStartTime set to 26.33
+m_flStateTransitionTime set to 116.33
 [HCT] game_rules_state_change -> PRE_GAME
 [HCT][HeroListTiming] событие game_rules_state_change -> state=8 -- немедленная проба
-[HCT][HeroListTiming] t=22.900001525879 | reason=state_change | delay=0
+[HCT][HeroListTiming] t=26.333333969116 | reason=state_change | delay=0
 [HCT][HeroListTiming] count=0 | GetHeroCount ok=true | raw=0
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=0
 [HCT][HeroListTiming]   элементов в таблице нет
@@ -627,65 +637,80 @@ Too many non-culled draws (alloc 512, need 582), resizing!
 Player 1 is the econ owner for 'npc_dota_hero_lich' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 1 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 2 is the econ owner for 'npc_dota_hero_chaos_knight' but has null econ inventory when checking by playerID.
+Player 2 is the econ owner for 'npc_dota_hero_tiny' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 2 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 3 is the econ owner for 'npc_dota_hero_skywrath_mage' but has null econ inventory when checking by playerID.
+Player 3 is the econ owner for 'npc_dota_hero_zuus' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 3 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 4 is the econ owner for 'npc_dota_hero_luna' but has null econ inventory when checking by playerID.
+Player 4 is the econ owner for 'npc_dota_hero_drow_ranger' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 4 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 5 is the econ owner for 'npc_dota_hero_kunkka' but has null econ inventory when checking by playerID.
+Player 5 is the econ owner for 'npc_dota_hero_skywrath_mage' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 5 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 6 is the econ owner for 'npc_dota_hero_razor' but has null econ inventory when checking by playerID.
+Player 6 is the econ owner for 'npc_dota_hero_zuus' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 6 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 7 is the econ owner for 'npc_dota_hero_bane' but has null econ inventory when checking by playerID.
+Player 7 is the econ owner for 'npc_dota_hero_axe' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 7 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 8 is the econ owner for 'npc_dota_hero_vengefulspirit' but has null econ inventory when checking by playerID.
+Player 8 is the econ owner for 'npc_dota_hero_bloodseeker' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 8 with steamID [I:0:0].
 With player inventory 0000000000000000.
-Player 9 is the econ owner for 'npc_dota_hero_bloodseeker' but has null econ inventory when checking by playerID.
+Player 9 is the econ owner for 'npc_dota_hero_oracle' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 9 with steamID [I:0:0].
 With player inventory 0000000000000000.
-WARNING: Received SpawnGroup_LoadCompleted for an unknown spawngrouphandle(20) from client 'KillStealer'
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "" for entity "npc_dota_hero_invoker"
-portrait_world_unit(hero_7[22135): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-dota_item_wearable([22137): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
-WARNING: Received SpawnGroup_LoadCompleted for an unknown spawngrouphandle(12) from client 'KillStealer'
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "" for entity "npc_dota_hero_furion"
+WARNING: RESOURCE_TYPE_MATERIAL resource 'materials/vgui/hud/heroportraits/portraitbackground_coolinterior.vmat' (A8E46E034AC89E75) requested but is not in the system. (Missing from from a manifest?)
+WARNING: Received SpawnGroup_LoadCompleted for an unknown spawngrouphandle(9) from client 'KillStealer'
 PregameHud - SetPreGameVisible 0
-PR:IncrementIdleTime 0:[U:1:1253347831] 8.97
-PR:IncrementIdleTime 4:[I:0:0] 5.30
-PR:IncrementIdleTime 2:[I:0:0] 5.20
-PR:IncrementIdleTime 7:[I:0:0] 2.00
-PR:IncrementIdleTime 3:[I:0:0] 4.60
-PR:IncrementIdleTime 8:[I:0:0] 2.40
-PR:IncrementIdleTime 0:[U:1:1253347831] 3.60
-PR:IncrementIdleTime 2:[I:0:0] 3.60
-PR:IncrementIdleTime 3:[I:0:0] 4.80
-PR:IncrementIdleTime 5:[I:0:0] 3.60
-PR:IncrementIdleTime 9:[I:0:0] 3.80
-PR:IncrementIdleTime 0:[U:1:1253347831] 24.10
-PR:IncrementIdleTime 2:[I:0:0] 24.10
-PR:IncrementIdleTime 3:[I:0:0] 24.10
-PR:IncrementIdleTime 4:[I:0:0] 24.10
-PR:IncrementIdleTime 5:[I:0:0] 24.10
-PR:IncrementIdleTime 6:[I:0:0] 24.00
-PR:IncrementIdleTime 7:[I:0:0] 24.10
-PR:IncrementIdleTime 8:[I:0:0] 24.00
-PR:IncrementIdleTime 1:[I:0:0] 25.10
-PR:IncrementIdleTime 9:[I:0:0] 25.10
+Send msg 8727 (k_EMsgClientToGCRequestAccountGuildPersonaInfo), 22 bytes
+Recv msg 8728 (k_EMsgClientToGCRequestAccountGuildPersonaInfoResponse), 33 bytes
+ERROR: RESOURCE_TYPE_MATERIAL resource 'materials/vgui/hud/heroportraits/portraitbackground_coolinterior.vmat' (A8E46E034AC89E75) requested is not loaded and may have been deleted.
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Failed loading resource "panorama/images/heroes/dota_fountain_png.vtex_c" (ERROR_FILEOPEN: File not found)
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+CLocalize::ConstructString failed to localize: '#DOTA_Tooltip_Ability_drow_ranger_multishot_SummaryDescription'
+CLocalize::ConstructString failed to localize: '#DOTA_Tooltip_Ability_drow_ranger_wave_of_silence_SummaryDescription'
+Job CDOTAGuideController::FindOrLoadGuide has spent >3.000ms without yielding: 8.086ms
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 2:[I:0:0] 2.20
+PR:IncrementIdleTime 3:[I:0:0] 2.40
+PR:IncrementIdleTime 4:[I:0:0] 2.20
+PR:IncrementIdleTime 7:[I:0:0] 2.20
+PR:IncrementIdleTime 9:[I:0:0] 2.30
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 5:[I:0:0] 3.10
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 1:[I:0:0] 6.60
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 6:[I:0:0] 2.80
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 7:[I:0:0] 19.10
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 9:[I:0:0] 23.30
 S:Gamerules: entering state 'DOTA_GAMERULES_STATE_GAME_IN_PROGRESS'
 RemoveAbility - Unit does not have ability backdoor_protection.
 RemoveAbility - Unit does not have ability backdoor_protection.
@@ -729,7 +754,7 @@ RemoveAbility - Unit does not have ability backdoor_protection.
 RemoveAbility - Unit does not have ability backdoor_protection.
 RemoveAbility - Unit does not have ability backdoor_protection.
 RemoveAbility - Unit does not have ability backdoor_protection.
-m_flGameStartTime set to 112.90
+m_flGameStartTime set to 116.37
 [HCT] game_rules_state_change -> GAME_IN_PROGRESS
 [HCT] state: PRE_GAME -> GAME
 
@@ -779,58 +804,53 @@ PR:SetSelectedHero 5:[I:0:0] npc_dota_hero_axe(2)
 Player 5 is the econ owner for 'npc_dota_hero_axe' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 5 with steamID [I:0:0].
 With player inventory 0000000000000000.
-WARNING: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe.vmdl' (8862AFECE0D9D7F4) requested but is not in the system. (Missing from from a manifest?)
 [HCT] HeroManager: игрок 5 -> npc_dota_hero_axe ( команда 3 )
 PR:SetSelectedHero 6:[I:0:0] (null)(0)
 PR:SetSelectedHero 6:[I:0:0] npc_dota_hero_axe(2)
 Player 6 is the econ owner for 'npc_dota_hero_axe' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 6 with steamID [I:0:0].
 With player inventory 0000000000000000.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe.vmdl' (8862AFECE0D9D7F4) requested is not loaded and may have been deleted.
 [HCT] HeroManager: игрок 6 -> npc_dota_hero_axe ( команда 3 )
 PR:SetSelectedHero 7:[I:0:0] (null)(0)
 PR:SetSelectedHero 7:[I:0:0] npc_dota_hero_axe(2)
 Player 7 is the econ owner for 'npc_dota_hero_axe' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 7 with steamID [I:0:0].
 With player inventory 0000000000000000.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe.vmdl' (8862AFECE0D9D7F4) requested is not loaded and may have been deleted.
 [HCT] HeroManager: игрок 7 -> npc_dota_hero_axe ( команда 3 )
 PR:SetSelectedHero 8:[I:0:0] (null)(0)
 PR:SetSelectedHero 8:[I:0:0] npc_dota_hero_axe(2)
 Player 8 is the econ owner for 'npc_dota_hero_axe' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 8 with steamID [I:0:0].
 With player inventory 0000000000000000.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe.vmdl' (8862AFECE0D9D7F4) requested is not loaded and may have been deleted.
 [HCT] HeroManager: игрок 8 -> npc_dota_hero_axe ( команда 3 )
 PR:SetSelectedHero 9:[I:0:0] (null)(0)
 PR:SetSelectedHero 9:[I:0:0] npc_dota_hero_axe(2)
 Player 9 is the econ owner for 'npc_dota_hero_axe' but has null econ inventory when checking by playerID.
 However, we did find a player for playerID 9 with steamID [I:0:0].
 With player inventory 0000000000000000.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe.vmdl' (8862AFECE0D9D7F4) requested is not loaded and may have been deleted.
 [HCT] HeroManager: игрок 9 -> npc_dota_hero_axe ( команда 3 )
 [HCT] итог: Dire | герой = npc_dota_hero_axe | игроков = 5 | применено = 5 | отказов = 0
 
 [HCT] === ГЕРОИ КОМАНД ПРИМЕНЕНЫ ===
 [HCT] Radiant: true | Dire: true
 [HCT][HeroListTiming] событие game_rules_state_change -> state=10 -- немедленная проба
-[HCT][HeroListTiming] t=112.90000915527 | reason=state_change | delay=0
+[HCT][HeroListTiming] t=116.36667633057 | reason=state_change | delay=0
 [HCT][HeroListTiming] count=20 | GetHeroCount ok=true | raw=20
 [HCT][HeroListTiming] GetAllHeroes ok=true | type=table | size=20
-[HCT][HeroListTiming]   item[1] luaType=table | GetClassname()=npc_dota_hero_invoker | GetUnitName()=npc_dota_hero_invoker
-[HCT][HeroListTiming]   item[2] luaType=table | GetClassname()=npc_dota_hero_vengefulspirit | GetUnitName()=npc_dota_hero_vengefulspirit
-[HCT][HeroListTiming]   item[3] luaType=table | GetClassname()=npc_dota_hero_bloodseeker | GetUnitName()=npc_dota_hero_bloodseeker
-[HCT][HeroListTiming]   item[4] luaType=table | GetClassname()=npc_dota_hero_bane | GetUnitName()=npc_dota_hero_bane
-[HCT][HeroListTiming]   item[5] luaType=table | GetClassname()=npc_dota_hero_razor | GetUnitName()=npc_dota_hero_razor
+[HCT][HeroListTiming]   item[1] luaType=table | GetClassname()=npc_dota_hero_oracle | GetUnitName()=npc_dota_hero_oracle
+[HCT][HeroListTiming]   item[2] luaType=table | GetClassname()=npc_dota_hero_drow_ranger | GetUnitName()=npc_dota_hero_drow_ranger
+[HCT][HeroListTiming]   item[3] luaType=table | GetClassname()=npc_dota_hero_axe | GetUnitName()=npc_dota_hero_axe
+[HCT][HeroListTiming]   item[4] luaType=table | GetClassname()=npc_dota_hero_bloodseeker | GetUnitName()=npc_dota_hero_bloodseeker
+[HCT][HeroListTiming]   item[5] luaType=table | GetClassname()=npc_dota_hero_furion | GetUnitName()=npc_dota_hero_furion
 [HCT][HeroListTiming] count > 0 -- глубокая проверка
-[HCT]   GetHero(0) -> table: 0x0017bb00
-[HCT]   GetHero(1) -> table: 0x0017bc10
+[HCT]   GetHero(0) -> table: 0x0018d868
+[HCT]   GetHero(1) -> table: 0x0018d978
 [HCT]   GetHero(20) -> nil
 [HCT][HeroListTiming] индексация GetHero: 0-based (валидны 0..19)
 [HCT] hero entity: HeroList.GetHero(0) | lua type = table
-[HCT]   GetClassname() -> npc_dota_hero_invoker
-[HCT]   GetUnitName() -> npc_dota_hero_invoker
-[HCT]   GetHeroID() -> 74
+[HCT]   GetClassname() -> npc_dota_hero_oracle
+[HCT]   GetUnitName() -> npc_dota_hero_oracle
+[HCT]   GetHeroID() -> 111
 [HCT]   GetPrimaryAttribute() -> 2 | engine name: nil
 [HCT]   GetHeroAttribute() -> метода нет
 [HCT]   GetAttribute() -> метода нет
@@ -840,7 +860,7 @@ C:\buildworker\source2_dota_rel_2019_win64\build\src\networksystem\networkserial
 Serialized nonresident asset models/heroes/sven/sven.vmdl.
 Calling Steam to write a minidump for the assert
 C:\buildworker\source2_dota_rel_2019_win64\build\src\networksystem\networkserializer.cpp (1320) : Assertion Failed in function CNetSerializerStrongHandle::Unserialize():
-Unserialized nonresident asset models/heroes/axe/axe.vmdl status [1]
+Unserialized nonresident asset models/heroes/sven/sven.vmdl status [1]
 Calling Steam to write a minidump for the assert
 WARNING: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested but is not in the system. (Missing from from a manifest?)
 Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
@@ -917,66 +937,6 @@ ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A
 ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
 Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
 ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-WARNING: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested but is not in the system. (Missing from from a manifest?)
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-WARNING: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested but is not in the system. (Missing from from a manifest?)
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-WARNING: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested but is not in the system. (Missing from from a manifest?)
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-WARNING: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested but is not in the system. (Missing from from a manifest?)
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
 C:Gamerules: entering state 'DOTA_GAMERULES_STATE_GAME_IN_PROGRESS'
 CDOTA_Hud_Main::EventGameRulesStateChanged DOTA_GAMERULES_STATE_GAME_IN_PROGRESS
 CDOTA_Hud_Main::DeleteGameEndScreen deleted GameEndContainer
@@ -995,7 +955,6 @@ ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A
 ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
 Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
 ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-opvar_get_float operator import_random_entry_start::get_no_repeat_opvar in dota_battleend failed to get field dota_change_this_opvar_name
 --- Sent CMsgGameServerInfo to GC
 server_public_ip_addr: 3116182990
 server_private_ip_addr: 3232235946
@@ -1005,13 +964,13 @@ server_key: ""
 server_hibernation: false
 server_type: GAME
 server_region: 0
-server_loadavg: 0.0674536824
+server_loadavg: 0.196759045
 server_tv_broadcast_time: -120
 server_game_time: 0.0999984741
 relay_slots_max: 0
 relays_connected: 0
 relay_clients_connected: 0
-tv_secret_code: 4375509239146154513
+tv_secret_code: 7103594402326579544
 server_version: 6943
 server_cluster: 0
 assigned_server_tv_port: 27020
@@ -1021,377 +980,212 @@ build_version: 6943
 ---
 Send msg 4508 (k_EMsgGCGameServerInfo), 82 bytes
 Spoken sound event 'sven_sven_spawn_02' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_spawn_10' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_spawn_04' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_spawn_09' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_spawn_01' is missing a duration (is -1)!
 Spoken sound event 'sven_sven_spawn_06' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_spawn_05' is missing a duration (is -1)!
-Spoken sound event 'sven_sven_spawn_05' is missing a duration (is -1)!
 Spoken sound event 'sven_sven_spawn_07' is missing a duration (is -1)!
 Spoken sound event 'sven_sven_spawn_05' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_spawn_05
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_spawn_05
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_mask.vmdl' for item ID 0 item Def 16 (#DOTA_Item_Svens_Mask) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_belt.vmdl' for item ID 0 item Def 18 (#DOTA_Item_Svens_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_gauntlet.vmdl' for item ID 0 item Def 19 (#DOTA_Item_Svens_Gauntlet) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_mask.vmdl' for item ID 0 item Def 16 (#DOTA_Item_Svens_Mask) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_belt.vmdl' for item ID 0 item Def 18 (#DOTA_Item_Svens_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_gauntlet.vmdl' for item ID 0 item Def 19 (#DOTA_Item_Svens_Gauntlet) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_mask.vmdl' for item ID 0 item Def 16 (#DOTA_Item_Svens_Mask) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_belt.vmdl' for item ID 0 item Def 18 (#DOTA_Item_Svens_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_gauntlet.vmdl' for item ID 0 item Def 19 (#DOTA_Item_Svens_Gauntlet) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_mask.vmdl' for item ID 0 item Def 16 (#DOTA_Item_Svens_Mask) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_belt.vmdl' for item ID 0 item Def 18 (#DOTA_Item_Svens_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_gauntlet.vmdl' for item ID 0 item Def 19 (#DOTA_Item_Svens_Gauntlet) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_mask.vmdl' for item ID 0 item Def 16 (#DOTA_Item_Svens_Mask) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_belt.vmdl' for item ID 0 item Def 18 (#DOTA_Item_Svens_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_gauntlet.vmdl' for item ID 0 item Def 19 (#DOTA_Item_Svens_Gauntlet) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Spoken sound event 'sven_sven_attack_09' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_09
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_09
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_09
-PR:IncrementIdleTime 0:[U:1:1253347831] 9.10
-PR:IncrementIdleTime 1:[I:0:0] 11.80
-PR:IncrementIdleTime 2:[I:0:0] 11.80
-PR:IncrementIdleTime 3:[I:0:0] 11.80
-PR:IncrementIdleTime 4:[I:0:0] 11.90
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_pain_03' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_pain_07' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-opvar_get_float operator import_random_entry_start::get_no_repeat_opvar in dota_battleend failed to get field dota_change_this_opvar_name
-PR:IncrementIdleTime 1:[I:0:0] 3.30
-PR:IncrementIdleTime 2:[I:0:0] 2.30
-PR:IncrementIdleTime 7:[I:0:0] 17.60
-PR:IncrementIdleTime 9:[I:0:0] 17.90
-PR:IncrementIdleTime 8:[I:0:0] 17.43
-Spoken sound event 'sven_sven_move_22' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_move_22
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_move_22
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_move_22
-CLocalize::CompileString failed to localize: '#DOTA_Tooltip_CurrentStats_Header'
-PR:IncrementIdleTime 0:[U:1:1253347831] 4.63
-**** Panel  has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel  has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel DeathCost has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel DeathTime has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel BuybackCost has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel CooldownReady has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel CooldownNotReady has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel BuybackGold has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel QuickbuyGold has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel QuickbuyAndBuybackGold has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel  has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel  has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel DeathCost has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel DeathTime has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel BuybackCost has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel CooldownReady has fill-parent-flow for width, but isn't in a flowing right layout
-**** Panel BuybackGold has fill-parent-flow for width, but isn't in a flowing right layout
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_pain_02' is missing a duration (is -1)!
+Spoken sound event 'sven_sven_spawn_07' is missing a duration (is -1)!
+C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_spawn_07
+C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_spawn_07
+PR:IncrementIdleTime 0:[U:1:1253347831] 70.70
+PR:IncrementIdleTime 6:[I:0:0] 26.40
+PR:IncrementIdleTime 7:[I:0:0] 5.40
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 8:[I:0:0] 29.30
+PR:IncrementIdleTime 9:[I:0:0] 3.90
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 5:[I:0:0] 29.10
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Too many non-culled draws (alloc 640, need 641), resizing!
+Job CDOTAGuideController::FindOrLoadGuide has spent >3.000ms without yielding: 7.822ms
+PR:IncrementIdleTime 7:[I:0:0] 11.90
+PR:IncrementIdleTime 8:[I:0:0] 11.90
+PR:IncrementIdleTime 9:[I:0:0] 11.90
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 5:[I:0:0] 12.70
+PR:IncrementIdleTime 6:[I:0:0] 12.00
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 6:[I:0:0] 4.50
+PR:IncrementIdleTime 7:[I:0:0] 4.50
+PR:IncrementIdleTime 9:[I:0:0] 4.50
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+PR:IncrementIdleTime 5:[I:0:0] 6.27
+PR:IncrementIdleTime 8:[I:0:0] 5.00
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+Spoken sound event 'sven_sven_pain_04' is missing a duration (is -1)!
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
 CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
 Spoken sound event 'sven_sven_pain_01' is missing a duration (is -1)!
-Spoken sound event 'sven_sven_pain_01' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_01
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_01
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_01
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_pain_04' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
+  617: 0.980000 msec change 'clientSideAnimCycleReset()' on field m_nNewSequenceParity(path=13/9) for ent npc_dota_tower(C_DOTA_BaseNPC_Tower) name='dota_badguys_tower1_top'
 CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
 CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
 CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_death_01' is missing a duration (is -1)!
+Spoken sound event 'sven_sven_death_13' is missing a duration (is -1)!
 Client (account 0) tried to execute invalid order (20). Unit is dead.
-Spoken sound event 'axe_axe_death_01' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of axe_axe_death_01
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of axe_axe_death_01
-Spoken sound event 'sven_sven_firstblood_01' is missing a duration (is -1)!
-Spoken sound event 'sven_sven_firstblood_01' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_firstblood_01
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_firstblood_01
-PR:IncrementIdleTime 0:[U:1:1253347831] 2.63
-PR:IncrementIdleTime 1:[I:0:0] 2.63
-PR:IncrementIdleTime 2:[I:0:0] 2.63
-PR:IncrementIdleTime 3:[I:0:0] 2.50
-PR:IncrementIdleTime 4:[I:0:0] 2.63
-PR:IncrementIdleTime 7:[I:0:0] 2.63
-PR:IncrementIdleTime 8:[I:0:0] 3.00
+Spoken sound event 'sven_sven_death_13' is missing a duration (is -1)!
+C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_death_13
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+Spoken sound event 'sven_sven_underattack_01' is missing a duration (is -1)!
+Spoken sound event 'sven_sven_underattack_01' is missing a duration (is -1)!
+C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_underattack_01
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+Error: Invalid SoundEvent Hash -1840875145 from entry Hero_Axe.Footsteps.Automaton
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
+CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
 opvar_get_float operator import_random_entry_start::get_no_repeat_opvar in dota_battleend failed to get field dota_change_this_opvar_name
-Spoken sound event 'sven_sven_attack_04' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_04
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_04
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_04
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-Spoken sound event 'sven_sven_pain_03' is missing a duration (is -1)!
-Spoken sound event 'sven_sven_pain_03' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_03
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_underattack_01' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_03
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_03
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-Spoken sound event 'sven_sven_lasthit_07' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'sven_sven_ability_warcry_02' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_head" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-Spoken sound event 'sven_sven_ability_warcry_02' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_ability_warcry_02
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_ability_warcry_02
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_ability_warcry_02
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-Spoken sound event 'sven_sven_pain_02' is missing a duration (is -1)!
-CPlayerVoiceListener::PostSpawnGroupUnload()
-Spoken sound event 'sven_sven_pain_02' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_pain_02
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/sven/sven.vmdl" for entity "npc_dota_hero_sven"
-Spoken sound event 'sven_sven_death_09' is missing a duration (is -1)!
-Spoken sound event 'sven_sven_death_09' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_death_09
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_sword.vmdl' for item ID 0 item Def 17 (#DOTA_Item_Svens_Sword) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_sword.vmdl' (DA0825541CB6A15C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_mask.vmdl' for item ID 0 item Def 16 (#DOTA_Item_Svens_Mask) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_mask.vmdl' (D5F8F6F4E6294D3C) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_belt.vmdl' for item ID 0 item Def 18 (#DOTA_Item_Svens_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_belt.vmdl' (EFE08125015FECFE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_gauntlet.vmdl' for item ID 0 item Def 19 (#DOTA_Item_Svens_Gauntlet) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_gauntlet.vmdl' (F7A5CD7F58B317F2) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/sven/sven_shoulder.vmdl' for item ID 0 item Def 20 (#DOTA_Item_Svens_Shoulder) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/sven/sven_shoulder.vmdl' (8FCEB7BCA9A0CD97) requested is not loaded and may have been deleted.
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_pain_06' is missing a duration (is -1)!
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_weapon.vmdl' for item ID 0 item Def 2 (#DOTA_Item_Axes_Axe) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_weapon.vmdl' (1D7497D64EBB82CE) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_ponytail.vmdl' for item ID 0 item Def 4 (#DOTA_Item_Axes_Hair) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_ponytail.vmdl' (CF89E77247220E47) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_armor.vmdl' for item ID 0 item Def 3 (#DOTA_Item_Axes_Shoulder_Guard) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_armor.vmdl' (06E035D924FBA7C7) requested is not loaded and may have been deleted.
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Attempting to set nonresident model 'models/heroes/axe/axe_belt.vmdl' for item ID 0 item Def 5 (#DOTA_Item_Axes_Belt) owner 0
-ERROR: RESOURCE_TYPE_MODEL resource 'models/heroes/axe/axe_belt.vmdl' (521465E7E84A5675) requested is not loaded and may have been deleted.
-Spoken sound event 'sven_sven_lasthit_03' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_respawn_03' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_death_09
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_death_09
-Spoken sound event 'axe_axe_pain_01' is missing a duration (is -1)!
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-Spoken sound event 'axe_axe_laugh_01' is missing a duration (is -1)!
-Spoken sound event 'axe_axe_laugh_01' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of axe_axe_laugh_01
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of axe_axe_laugh_01
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of axe_axe_laugh_01
-Spoken sound event 'sven_sven_attack_07' is missing a duration (is -1)!
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_07
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_07
-C_SceneEntity::SetupClientOnlyScene: Couldn't determine duration of sven_sven_attack_07
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
-CGameParticleManager::SetParticleControlEnt: Unable to lookup attachment "attach_hitloc" on model "models/heroes/axe/axe.vmdl" for entity "npc_dota_hero_axe"
+Spoken sound event 'sven_sven_respawn_01' is missing a duration (is -1)!
 ChangeGameUIState: DOTA_GAME_UI_DOTA_INGAME -> DOTA_GAME_UI_STATE_DASHBOARD
 Send msg 7197 (k_EMsgGCMatchmakingStatsRequest), 8 bytes
 Send msg 8673 (k_EMsgClientToGCRequestGuildData), 19 bytes
 Failed loading resource "panorama/images/heroes/icons/npc_dota_rattletrap_cog_png.vtex_c" (ERROR_FILEOPEN: File not found)
 Model models/items/rattletrap/the_warring_states_star_cogs/the_warring_states_star_cogs.vmdl: Attempted to attach attachment attach_hitloc to an unknown bone Bone001!
 Recv msg 8674 (k_EMsgClientToGCRequestGuildDataResponse), 19 bytes
-CPlayerVoiceListener::PostSpawnGroupUnload()
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+portrait_world_unit(hero[21505): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+dota_item_wearable([21506): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ -1880887680 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1514634576 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Recv msg 7198 (k_EMsgGCMatchmakingStatsResponse), 306 bytes
+Recv msg 7198 (k_EMsgGCMatchmakingStatsResponse), 310 bytes
 CL:  disconnect clicked disconnect button
 Disconnected from server: NETWORK_DISCONNECT_DISCONNECT_BY_USER
 SV:  Server shutting down: NETWORK_DISCONNECT_DISCONNECT_BY_USER (2)
 CNetworkGameServerBase::SetServerState (ss_active -> ss_dead)
 Disconnect client 'KillStealer' from server: NETWORK_DISCONNECT_SHUTDOWN (Server shutdown)
 Client 0 'KillStealer' signon state SIGNONSTATE_FULL -> SIGNONSTATE_NONE
-Closing Steam Net Connection on socket 'server' to loopback:0, handle #2251945183 (1001 NETWORK_DISCONNECT_SHUTDOWN)
-CloseSteamNetConnection handle #2251945183 (userdata 0)
-Disassociating NetChan KillStealer @  (unknown) from Steam Net Connection handle #2251945183 (userdata 0)
-[#2251945183 pipe 'KillStealer'] closed by app, linger requested but not needed (1001) NETWORK_DISCONNECT_SHUTDOWN
-[#380780533 pipe 'server'] closed by peer (1001): NETWORK_DISCONNECT_SHUTDOWN
-Removing Steam Net Connection for loopback:0, handle #2251945183
+Closing Steam Net Connection on socket 'server' to loopback:0, handle #386062704 (1001 NETWORK_DISCONNECT_SHUTDOWN)
+CloseSteamNetConnection handle #386062704 (userdata 0)
+Disassociating NetChan KillStealer @  (unknown) from Steam Net Connection handle #386062704 (userdata 0)
+[#386062704 pipe 'KillStealer'] closed by app, linger requested but not needed (1001) NETWORK_DISCONNECT_SHUTDOWN
+[#1564086142 pipe 'server'] closed by peer (1001): NETWORK_DISCONNECT_SHUTDOWN
+Removing Steam Net Connection for loopback:0, handle #386062704
 SV:  AsyncUnloadSpawnGroup( 4 ) -- no such group
 SV:  AsyncUnloadSpawnGroup( 5 ) -- no such group
 CPlayerVoiceListener::PostSpawnGroupUnload()
@@ -1409,17 +1203,43 @@ Closing 'server' P2P listen socket
 Closing 'server' poll group
 CSource2Server::GameServerSteamAPIDeactivated()
 Disconnecting from server: NETWORK_DISCONNECT_DISCONNECT_BY_USER
-Closing Steam Net Connection on socket 'client' to loopback:1, handle #380780533 (1002 NETWORK_DISCONNECT_DISCONNECT_BY_USER)
-CloseSteamNetConnection handle #380780533 (userdata 1)
-Disassociating NetChan server @  (unknown) from Steam Net Connection handle #380780533 (userdata 1)
-Removing Steam Net Connection for loopback:1, handle #380780533
+Closing Steam Net Connection on socket 'client' to loopback:1, handle #1564086142 (1002 NETWORK_DISCONNECT_DISCONNECT_BY_USER)
+CloseSteamNetConnection handle #1564086142 (userdata 1)
+Disassociating NetChan server @  (unknown) from Steam Net Connection handle #1564086142 (userdata 1)
+Removing Steam Net Connection for loopback:1, handle #1564086142
 Closing 'client' poll group
 CHostStateMgr::QueueNewRequest( Idle (levelload), 3 )
 HostStateRequest::Start(HSR_IDLE):  loop(levelload) id(3) addons() desc(Idle (levelload))
 SwitchToLoop levelload requested:  id [3] addons []
+Deleting texture with outstanding streaming request (models/items/axe/axe_carnival/axe_carnival_base/axe_carnival_head_lod0_vmorf.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/oracle/oracle_carnival/oracle_carnival_back_specmask_psd_28b5d71a.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/oracle/oracle_carnival/oracle_carnival_back_specmask_tga_89b0812e.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/oracle/oracle_carnival/oracle_carnival_back_detailmask_tga_14e944bc.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_weapon_normal_psd_589b58d3.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_weapon_specmask_psd_fc4674bd.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_weapon_selfillummask_psd_59ea567e.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_weapon_cubemap_mask_psd_5985a47c.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_weapon_color_psd_d1f7e677.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/oracle/oracle_carnival/oracle_carnival_weapon_glass_normal_psd_60b37772.vtex)
+Deleting texture with outstanding streaming request (materials/models/heroes/oracle/crystal_ball_diffusemask_tga_c1e625b6.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/oracle/oracle_carnival/oracle_carnival_cube_psd_a17f8992.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/oracle/oracle_carnival/oracle_carnival_weapon_cube_psd_172eb2b4.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_shoulders_normal_psd_c4041a25.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_shoulders_specmask_psd_8b831c2d.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_shoulders_metalnessmask_psd_6ad39eac.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_shoulders_color_psd_fb0c4c87.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_head_specmask_psd_18a0e13e.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_head_metalnessmask_psd_ca41e600.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_head_color_psd_472d9b5b.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_body_normal_psd_40e6e7e3.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_body_specmask_psd_c5a3253c.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_body_selfillum_psd_e5874d3d.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_body_cubemap_mask_psd_ce433fe8.vtex)
+Deleting texture with outstanding streaming request (materials/models/cubemaps/razor_arcana_metal_alt_cube_psd_80449759.vtex)
+Deleting texture with outstanding streaming request (materials/models/items/axe/axe_carnival/axe_carnival_body_color_psd_f8552525.vtex)
 CL:  IGameSystem::LoopDeactivateAllSystems {
-WriteSteamRemoteStorageFileAsync( "scripts/control_groups.txt" ) -> at 554.374
-WriteSteamRemoteStorageFileAsync( "scripts/item_suggest_preference.txt" ) -> at 554.374
+WriteSteamRemoteStorageFileAsync( "scripts/control_groups.txt" ) -> at 306.828
+WriteSteamRemoteStorageFileAsync( "scripts/item_suggest_preference.txt" ) -> at 306.828
 CL:  } IGameSystem::LoopDeactivateAllSystems done
 CL: CNetworkStringTableContainer::RemoveAllTables:  removing 19 tables
 SV:  IGameSystem::LoopDeactivateAllSystems {
@@ -1431,7 +1251,7 @@ ILocalize::AddFile() failed to load file "resource/localization/broadcastfacts_e
 ILocalize::AddFile() failed to load file "resource/localization/broadcastfacts_russian.txt".
 CL:  CGameRulesGameSystem::GameShutdown uninstalled game rules
 CL:  CGameRules::CGameRules destructed
-WriteSteamRemoteStorageFileAsync( "voice_ban.dt" ) -> at 554.982
+WriteSteamRemoteStorageFileAsync( "voice_ban.dt" ) -> at 307.390
 CPlayerVoiceListener::GameShutdown()
 SV:  CGameRulesGameSystem::GameShutdown uninstalled game rules
 SV:  CGameRules::CGameRules destructed
@@ -1440,11 +1260,11 @@ CLocalize::CompileString failed to localize: '#addon_game_name'
 ChangeGameUIState: DOTA_GAME_UI_STATE_DASHBOARD -> DOTA_GAME_UI_STATE_LOADING_SCREEN
 LoadingDisplay changed from NONE to LOADING (map="")
 Host activate: Idle (levelload)
-CAsyncWriteInProgress::OnComplete( "scripts/control_groups.txt" ) -> Success at 555.257
-CAsyncWriteInProgress::OnComplete( "scripts/item_suggest_preference.txt" ) -> Success at 555.257
-CAsyncWriteInProgress::OnComplete( "voice_ban.dt" ) -> Success at 555.257
-Steam Net connection #380780533 pipe 'server' closed by peer, reason 1001: NETWORK_DISCONNECT_SHUTDOWN
-CloseSteamNetConnection handle #380780533 (userdata -1)
+CAsyncWriteInProgress::OnComplete( "scripts/control_groups.txt" ) -> Success at 307.680
+CAsyncWriteInProgress::OnComplete( "scripts/item_suggest_preference.txt" ) -> Success at 307.680
+CAsyncWriteInProgress::OnComplete( "voice_ban.dt" ) -> Success at 307.681
+Steam Net connection #1564086142 pipe 'server' closed by peer, reason 1001: NETWORK_DISCONNECT_SHUTDOWN
+CloseSteamNetConnection handle #1564086142 (userdata -1)
 CL:  CLoopModeLevelLoad::MaybeSwitchToGameLoop switching to "game" loopmode with addons ()
 SwitchToLoop game requested:  id [3] addons []
 **** Panel MainObjectivesTitle has fill-parent-flow for width, but isn't in a flowing right layout
@@ -1466,14 +1286,14 @@ CNetworkGameServerBase::SetServerState (ss_waitingforgamesessionmanifest -> ss_l
 CNetworkGameServerBase::SetServerState (ss_loading -> ss_active)
 CL:  CWaitForGameServerStartupPrerequisite done waiting for server
 CL:  CCreateGameClientJob creating client connection to 'loopback'
-[#1956512635 pipe] connected
-[#63071426 pipe] connected
+[#2476129739 pipe] connected
+[#3824404606 pipe] connected
 Created poll group for socket 'client'
 Created poll group for socket 'server'
-Connected loopback client=749e037b@loopback:1 <-> server=3c264c2@loopback:0
+Connected loopback client=9396bdcb@loopback:1 <-> server=e3f3c87e@loopback:0
 Tick packet desired receive margin now 35.0ms.  cl_tickpacket_recvmargin_desired=5  cl_tickpacket_desired_queuelength=0.  engine_frametime_warnings_enable=0, cl_async_usercmd_send=1
-Associating NetChan KillStealer @ loopback:0 (loopback:0) with Steam Net Connection handle #63071426 (userdata 1)
-Associating NetChan server @ loopback:1 (loopback:1) with Steam Net Connection handle #1956512635 (userdata 0)
+Associating NetChan KillStealer @ loopback:0 (loopback:0) with Steam Net Connection handle #3824404606 (userdata 1)
+Associating NetChan server @ loopback:1 (loopback:1) with Steam Net Connection handle #2476129739 (userdata 0)
 CL:  Connected to 'loopback:1'
 Client 0 'KillStealer' setting rate to 80000
 Game: "Dota 2"
@@ -1482,13 +1302,13 @@ Players: 1 (0 bots) / 1 humans
 Build: 10835 (revision 11069754)
 Server Number: 3
 CL:  CNetworkGameClient::ProcessServerInfo
-ReadSteamRemoteStorageFile( bufOut, "voice_ban.dt" ) -> 0.000687 seconds
+ReadSteamRemoteStorageFile( bufOut, "voice_ban.dt" ) -> 0.000658 seconds
 Tick packet desired receive margin now 71.7ms.  cl_tickpacket_recvmargin_desired=5  cl_tickpacket_desired_queuelength=0.  engine_frametime_warnings_enable=0, cl_async_usercmd_send=1
 CNetworkGameClient::ProcessClassInfo: create on client true
 CNetworkGameClient::ProcessClassInfo: creating client serializers from local server serializers (crc 0, server api exists)
 Client missing networkable entity class CPhysMagnet
 Client missing networkable entity class CSpotlightEnd
-CNetworkGameClientBase::LinkClasses took 144.532 msec
+CNetworkGameClientBase::LinkClasses took 149.195 msec
 CL:  CGameClientConnectPrerequisite connection succeeded
 ChangeGameUIState: DOTA_GAME_UI_STATE_LOADING_SCREEN -> DOTA_GAME_UI_STATE_DASHBOARD
 LoadingDisplay changed from LOADING to NONE (map="<empty>")
@@ -1498,8 +1318,8 @@ HO:  } IGameSystem::LoopActivateAllSystems done
 SV:  } IGameSystem::LoopActivateAllSystems done
 SV:  Game started
 CL:  IGameSystem::LoopActivateAllSystems {
-ReadSteamRemoteStorageFile( bufOut, "scripts/control_groups.txt" ) -> 0.000636 seconds
-ReadSteamRemoteStorageFile( bufOut, "scripts/item_suggest_preference.txt" ) -> 0.000374 seconds
+ReadSteamRemoteStorageFile( bufOut, "scripts/control_groups.txt" ) -> 0.000567 seconds
+ReadSteamRemoteStorageFile( bufOut, "scripts/item_suggest_preference.txt" ) -> 0.000359 seconds
 CL:  } IGameSystem::LoopActivateAllSystems done
 CL:  CNetworkGameClient::OnSwitchLoopModeFinished( game : success )
 SV:  Sending full update to client KillStealer (reason:  initial update)
@@ -1513,32 +1333,36 @@ CL:  Signon traffic "server":  incoming 12.924 KB [7 netframes], outgoing 1.205 
 KillStealer @ loopback:0:  NetChan Setting Timeout to 20.00 seconds
 Failed loading resource "panorama/images/heroes/icons/npc_dota_rattletrap_cog_png.vtex_c" (ERROR_FILEOPEN: File not found)
 Model models/items/rattletrap/the_warring_states_star_cogs/the_warring_states_star_cogs.vmdl: Attempted to attach attachment attach_hitloc to an unknown bone Bone001!
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
-Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1160164384 ]
+Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 364354624 ]
 Shader spring_meteor.vfx attribute "DepthPassBatchID" has inconsistent value or type across multiple shaders of a feature combo! [ 1 ]
+materials/models/items/bristleback/bristlebot/dark_carnival_bristlebot_goo_proj_ball.vmat Shader: spring_meteor.vfx attribute 'DepthPassBatchID' set in mode 'Depth' does not match value set in another mode 1 != 0.
+materials/models/items/bristleback/bristlebot/dark_carnival_bristlebot_goo_proj_ball.vmat Shader: spring_meteor.vfx attribute 'DepthPassBatchID' set in mode 'DotaForward' does not match value set in another mode 0 != 1.
 materials/models/items/bristleback/bristlebot/dark_carnival_bristlebot_goo_proj_ball.vmat Shader: spring_meteor.vfx attribute 'DepthPassBatchID' set in mode 'Default' does not match value set in another mode 1 != 0.
-materials/models/items/bristleback/bristlebot/dark_carnival_bristlebot_goo_proj_ball.vmat Shader: spring_meteor.vfx attribute 'DepthPassBatchID' set in mode 'ToolsWireframe' does not match value set in another mode 0 != 1.
-materials/models/items/bristleback/bristlebot/dark_carnival_bristlebot_goo_proj_ball.vmat Shader: spring_meteor.vfx attribute 'DepthPassBatchID' set in mode 'DotaForward' does not match value set in another mode 1 != 0.
+materials/models/items/bristleback/bristlebot/dark_carnival_bristlebot_goo_proj_ball.vmat Shader: spring_meteor.vfx attribute 'DepthPassBatchID' set in mode 'ToolsVis' does not match value set in another mode 0 != 1.
+Send msg 4523 (k_EMsgClientToGCAggregateMetrics), 31 bytes
+
+вот логи но не какой панели не было герои просто сами поменялись после горна ну начала игры там когда крипы выбигают
