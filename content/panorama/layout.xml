@@ -1,0 +1,19 @@
+<root>
+	<!-- draft.js подключается из hud_script.js (Valve convention); стили — здесь -->
+	<styles>
+		<include src="file://{resources}/hud/draft.css" />
+	</styles>
+	<!-- HERO CLASH TURBO: минимальный UI.
+	     Единственный слой пока — панель драфта (отображение options из CustomNetTables).
+	     Голосование кнопками, таймер и меню режимов — следующие этапы. -->
+	<Panel class="HCTRoot" hittest="false" id="HCT_Root">
+		<Panel class="HCTDraftPanel" hittest="true" id="hct_draft_panel">
+			<Label id="HCT_DraftTitle" class="HCTTitle" text="HERO CLASH TURBO — ГОЛОСОВАНИЕ" />
+			<Label id="HCT_DraftTeam" class="HCTTeam" text="" />
+			<Panel id="HCT_Options" class="HCTOptions">
+				<!-- Опции добавляет draft.js из CustomNetTables hct_draft -->
+			</Panel>
+			<Label id="HCT_DraftStatus" class="HCTStatus" text="" />
+		</Panel>
+	</Panel>
+</root>

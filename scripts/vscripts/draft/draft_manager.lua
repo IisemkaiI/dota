@@ -63,6 +63,12 @@ function DraftManager:StartForTeam( team )
 		HCTDebug:LogParts( "  вариант", index, "=", heroName )
 	end
 
+	-- Публикация предложений на клиент (CustomNetTables). Слой только
+	-- чтения: NetTables сам берёт данные из GameState.draft.
+	if NetTables ~= nil then
+		NetTables:PublishTeam( team )
+	end
+
 	self:SendOptionsToTeam( team )
 	return true
 end
@@ -191,6 +197,11 @@ function DraftManager:ReceiveVote( playerID, heroName )
 		"из", #TeamManager:GetTeamPlayers( team )
 	)
 
+	-- Обновить счётчики голосов на клиенте.
+	if NetTables ~= nil then
+		NetTables:PublishTeam( team )
+	end
+
 	return true
 end
 
@@ -255,6 +266,11 @@ function DraftManager:FinishTeamDraft( team )
 
 	GameState:SetDraftPick( team, winner )
 	GameState:SetDraftOpen( team, false )
+
+	-- Финальное состояние драфта на клиент: pick + finished.
+	if NetTables ~= nil then
+		NetTables:PublishTeam( team )
+	end
 
 	if not HeroManager:SetTeamHero( team, winner ) then
 		HCTDebug:ErrorParts( "FinishTeamDraft: HeroManager отклонил героя команды", teamName )

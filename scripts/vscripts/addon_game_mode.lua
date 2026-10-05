@@ -21,6 +21,10 @@ require( "core.game_state" )
 require( "core.team_manager" )
 require( "core.hero_manager" )
 
+-- Публикация данных драфта на клиент (CustomNetTables). Используется
+-- DraftManager; читает только GameState.draft.
+require( "core.net_tables" )
+
 -- Снимок имён героев из itembuilds. Загружается раньше hero_pool:
 -- тот использует его как fallback-источник.
 require( "draft.hero_names" )
@@ -54,6 +58,8 @@ end
 
 -- Вызывается движком один раз при старте карты
 function Activate()
+	NetTables:Init()
+
 	GameRules.HeroClashTurbo = CHeroClashGameMode()
 	GameRules.HeroClashTurbo:Init()
 end

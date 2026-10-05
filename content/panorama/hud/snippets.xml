@@ -1,0 +1,8 @@
+<root>
+	<Panel id="HCTDraftOption">
+		<Panel class="HCTOptionRow">
+			<Label id="HCTOptionName" text="" />
+			<Label id="HCTOptionVotes" text="" />
+		</Panel>
+	</Panel>
+</root>
